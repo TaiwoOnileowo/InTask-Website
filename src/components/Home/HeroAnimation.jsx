@@ -17,7 +17,7 @@ const HeroAnimation = () => {
   return (
     <div className="z-[10] pt-4 h-screen">
       <div className="w-full flex justify-center mb-8">
-        <h1 className="text-3xl font-orelega font-bold text-primary">
+        <h1 className="text-3xl font-orelega animate-fade-in font-bold text-primary">
           Our Top Talents This Month!
         </h1>
       </div>

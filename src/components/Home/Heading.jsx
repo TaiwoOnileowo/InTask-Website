@@ -1,42 +1,38 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { MdOutlineSettings } from "react-icons/md";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Heading = ({ text }) => {
-  const titleRef = useRef(null);
+  const { ref, inView } = useInView({
+    threshold: 0.7,
+    triggerOnce: true,
+  });
 
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.7,
-    };
-
-    const titleObserver = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        titleRef.current.classList.add("show");
-      }
-    }, observerOptions);
-
-    if (titleRef.current) {
-      titleObserver.observe(titleRef.current);
-    }
-
-    return () => {
-      if (titleRef.current) {
-        titleObserver.unobserve(titleRef.current);
-      }
-    };
-  }, []);
+  const headingVariants = {
+    hidden: { opacity: 0, y: 200, scale: 0.3 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 1, ease: "easeOut" },
+    },
+  };
 
   return (
     <div className="mb-8">
-      <h1
-        ref={titleRef}
-        className="text-3xl font-bold autoshow inline-flex items-center justify-center gap-2 opacity-0 transition-opacity duration-700 ease-in-out"
+      <motion.h1
+        ref={ref}
+        className="text-3xl font-bold inline-flex items-center justify-center gap-2"
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={headingVariants}
       >
-        <span className="text-primary rotate">
+        <motion.span className="text-primary rotate">
           <MdOutlineSettings />
-        </span>
+        </motion.span>
         {text}
-      </h1>
+      </motion.h1>
     </div>
   );
 };

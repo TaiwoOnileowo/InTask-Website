@@ -5,6 +5,7 @@ import { FaRegClock } from "react-icons/fa";
 import { TbCash } from "react-icons/tb";
 import { Navigation, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -22,13 +23,17 @@ const Vacancy = () => {
     return shortDescription;
   };
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="relative flex flex-col z-[10] px-10 py-24 bg-background overflow-hidden items-center md:px-28">
-      <div className="absolute w-[70%] h-[70%] z-[0] -left-[55%]  -top-8 blur opacity-80 rounded-full bg-gradient-4" />
+    <div className="relative flex flex-col z-[10] px-10 py-24 pt-16 bg-gradient-4 overflow-hidden items-center md:px-28">
       <Heading text="Pick Up a Project" />
-      <div className="flex flex-col md:flex-row z-[10] gap-12 w-full">
+      <div className="flex flex-col md:flex-row mt-16 z-[10] gap-12 w-full">
         <div className="w-full md:w-[45%] flex z-[10] flex-col justify-center text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl z-[10]font-bold">Latest projects</h1>
+          <h1 className="text-4xl md:text-5xl z-[10] font-bold">Latest projects</h1>
           <p className="w-full mt-6 font-inter text-base z-[10] md:text-lg text-dim">
             Are you a young talent looking to kickstart your career? Dive into
             exciting opportunities with inTask!
@@ -37,7 +42,7 @@ const Vacancy = () => {
             Get Started
           </button>
         </div>
-        <div className="w-full md:w-[55%] ">
+        <div className="w-full md:w-[55%]">
           <Swiper
             modules={[Navigation, Scrollbar, A11y]}
             spaceBetween={20}
@@ -47,7 +52,13 @@ const Vacancy = () => {
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col cursor-pointer items-center justify-center bg-white mx-1 p-6 h-[350px] rounded-2xl shadow-lg transition-transform transform hover:scale-105">
+                <motion.div
+                  className="flex flex-col cursor-pointer items-center justify-center bg-white mx-1 p-6 h-[350px] rounded-2xl shadow-lg transition-transform transform hover:scale-105"
+                  initial="hidden"
+                  animate="visible"
+                  variants={fadeInUp}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
                   <h2 className="text-xl font-bold">
                     {getFormattedTitle(project.project)}
                   </h2>
@@ -85,7 +96,7 @@ const Vacancy = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>

@@ -23,7 +23,7 @@ export default {
         "gradient-1": "linear-gradient(to right, #37DC29, #76E76D)",
         "gradient-2": "linear-gradient(to bottom, #2A8F1A, #C4E3FF)",
         "gradient-3": "linear-gradient(to right, #333333, #4CAF50, #C4E3FF)",
-        "gradient-4": "radial-gradient( #C4E3FF, #F3FBE8)",
+        "gradient-4": "radial-gradient( #C4E3FF 0%, #F3FBE8 100%)",
         "gradient-5": "linear-gradient(to right,  #E0EFF0, #F5F5F5)",
       }),
     },

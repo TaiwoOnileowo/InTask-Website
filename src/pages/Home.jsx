@@ -6,6 +6,8 @@ import Vacancy from "../components/Home/Vacancy";
 import Jobs from "../components/Home/Jobs";
 import NewsLetter from "../components/Home/NewsLetter";
 import HowItWorks from "../components/Home/HowItWorks";
+import CTA from "../components/Home/CTA";
+import TestimonialSection from "../components/Home/Testimonials";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Categories />
       <Vacancy />
       <Jobs />
+      <TestimonialSection/>
+      <CTA/>
       <NewsLetter />
     </div>
   );

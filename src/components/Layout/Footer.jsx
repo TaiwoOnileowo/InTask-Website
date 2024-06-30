@@ -12,7 +12,7 @@ const Footer = () => {
         {footerLinks.map((link) => (
           <div className="flex justify-between border-b border-dim text-white py-2 font-roboto-mono">
             <p>{link.text1}</p>
-            <p className="inline-flex gap-4 cursor-pointer hover:scale-[0.9] items-center transition-all duration-300 ease">{link.text2}<span className="hover:text-primary"><FaArrowRight/></span></p>
+            <p className="inline-flex gap-4 cursor-pointer hover:scale-[0.9] items-center transition-all duration-300 hover:text-primary ease">{link.text2}<span className=""><FaArrowRight/></span></p>
           </div>
         ))}
       </div>
