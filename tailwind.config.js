@@ -16,7 +16,8 @@ export default {
         border: "#E0E0E0",
         yellow: "#F6EE28",
         dim: "#6b7280",
-        gold: "#FFD700"
+        gold: "#FFD700",
+        light_green: "#fafafa"
       },
 
       backgroundImage: (theme) => ({

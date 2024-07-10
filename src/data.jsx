@@ -10,6 +10,11 @@ import sticker3 from "./assets/Home/sticker3.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import frontend from "./assets/Home/frontend.webp";
+import graphic from "./assets/Home/graphic.avif";
+import productmanager from "./assets/Home/productmanager.webp";
+import uidesigner from "./assets/Home/uidesigner.jpg";
+import photography from "./assets/Home/photography.webp";
 export const navLinks = [
   {
     title: "Home",
@@ -55,6 +60,43 @@ export const topTalents = [
     skill: "Frontend Developer",
     customers: "1k customers",
     description: "I develop frontend services for my clients at a low price",
+  },
+];
+export const heroData = [
+  {
+    image: frontend,
+    role: "Frontend Developer",
+    name: "Timmy Dax",
+    star: 5.0,
+    reviews: 241
+  },
+  {
+    image: graphic,
+    role: "Graphic Designer",
+    name: "Oluwaseun Oyebade",
+    star: 4.9,
+    reviews:93
+  },
+  {
+    image: productmanager,
+    role: "Product Manager",
+    name: "Chibuzor Okafor",
+    star: 4.9,
+    reviews: 75
+  },
+  {
+    image: uidesigner,
+    role: "UI/UX Designer",
+    name: "Joyce Aries",
+    star: 5.0,
+    reviews: 60
+  },
+  {
+    image: photography,
+    role: "Photographer",
+    name: "Idika Precious",
+    star: 4.9,
+    reviews: 139
   },
 ];
 export const categories = [
@@ -281,3 +323,9 @@ export const footer = [
   },
 ];
 export const socials = [<FaFacebookF />, <FaInstagram />, <FaLinkedin />];
+export const done=[
+"Get matched with expert freelancers in minutes",
+"Dedicated 24/7 customer service team",
+"Secure payments and transactions",
+"Money back guarantee and anti-fraud protection"
+]

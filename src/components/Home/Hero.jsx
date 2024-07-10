@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import image from "../../assets/Home/image1.png";
 import HeroAnimation from "./HeroAnimation";
 
 const Hero = () => {
+  const [index, setIndex] = useState(0);
+  const [color, setColor] = useState("primary");
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    switch (index) {
+      case 0:
+        setColor("#37DC29");
+        break;
+      case 1:
+        setColor("#ac8791");
+        break;
+      case 2:
+        setColor("#FD7A68");
+        break;
+      case 3:
+        setColor("#913D6C");
+        break;
+      default:
+        setColor("primary");
+        break;
+    }
+  }, [index]);
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -25,36 +49,42 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen px-24 flex pt-[10%] bg-gradient-5 gap-32 overflow-hidden relative">
-      <img src={image} className="absolute z-[0] -top-32 right-0 w-[50%] h-auto" alt="Hero background" />
-      <div className="absolute w-[500px] h-[500px] z-[0] right-36 top-10 blur opacity-80 rounded-full bg-gradient-4" />
+    <div className="h-screen px-24 flex pt-[15%] bg-gradient-5 gap-4 overflow-hidden relative">
       <motion.div
         ref={ref}
-        className="pt-12 w-[45%] z-[10]"
+        className=" w-[60%] z-[10]"
         variants={staggerContainer}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         <motion.h1
-          className="font-poppins text-5xl font-bold leading-tight"
+          className="font-poppins text-[4.625rem] font-[500] leading-[5.125rem] tracking-[-0.0625rem]"
           variants={fadeInUp}
         >
-          Hire the Next Gen <span className="text-primary">Talents</span>
+          Hire the Next Gen <span style={{ color: color }}>Talents</span>
         </motion.h1>
         <motion.p
-          className="mt-6 font-inter text-lg text-dim"
+          className="mt-6 font-inter text-[1.3125rem] text-dim leading-[1.9375rem]"
           variants={fadeInUp}
         >
-          InTask is an exclusive network of the top young freelance software developers, designers, marketing experts, finance experts, product managers, and project managers in the world. Top companies hire InTask talents for their most important projects.
+          InTask is an exclusive network of the top young freelancers. Top
+          companies hire InTask talents for their most important projects.
         </motion.p>
         <motion.button
-          className="bg-primary text-white shadow-md shadow-accent hover:shadow-xl hover:shadow-accent w-[180px] hover:scale-95 transition-all duration-300 px-6 py-3 mt-8 rounded-md"
+          style={{
+            backgroundColor: isHovered ? "#37DC29" : color,
+            transform: isHovered ? "scale(0.95)" : "scale(1)",
+            transition: "all 0.3s ease-in-out",
+          }}
+          className="text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent  px-6 py-3 mt-8 rounded-md"
           variants={fadeInUp}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
           Hire Top Talent
         </motion.button>
       </motion.div>
-      <HeroAnimation />
+      <HeroAnimation index={index} setIndex={setIndex} />
     </div>
   );
 };

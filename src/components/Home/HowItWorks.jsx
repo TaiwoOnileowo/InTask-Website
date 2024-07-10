@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from 'react-intersection-observer';
-import woman from "../../assets/Home/woman2.png";
+import woman from "../../assets/Home/woman3.png";
 import { howitworks } from "../../data";
 
 const HowItWorks = () => {
