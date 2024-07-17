@@ -2,19 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./components/Layout/Layout.jsx";
+// import Layout from "./components/Layout/Layout.jsx";
 import Error from "./components/Error.jsx";
 import { RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-
+import Signup from "./pages/Signup.jsx";
+import {createHashRouter} from "react-router-dom"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    // element: <Layout />,
     errorElement: <Error />,
     children: [
       { index: true, element: <Home /> },
-      // { path: "posts/:id", element: <PostDetail /> },
+      { path: "/signup", element: <Signup /> },
       // { path: "register", element: <Register /> },
       // { path: "login", element: <Login /> },
       // { path: "profile/:id", element: <UserProfile /> },

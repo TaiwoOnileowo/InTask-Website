@@ -50,12 +50,14 @@ const CTA = () => {
             There's never been a better time to take yourself online and start
             making money from your very own fine-tuned set of skills.
           </motion.p>
-          <motion.button
-            className="bg-primary text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent hover:scale-95 transition-all duration-300 px-6 py-3 mt-8 rounded-md"
-            variants={fadeInUp}
-          >
-            Get Started
-          </motion.button>
+          <a href="/singup">
+            <motion.button
+              className="bg-primary text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent hover:scale-95 transition-all duration-300 px-6 py-3 mt-8 rounded-md"
+              variants={fadeInUp}
+            >
+              Get Started
+            </motion.button>
+          </a>
         </div>
       </div>
     </motion.div>

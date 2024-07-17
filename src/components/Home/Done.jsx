@@ -21,9 +21,11 @@ const Done = () => {
             );
           })}
         </ul>
-        <button className="bg-primary text-white w-[190px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent hover:scale-95 transition-all duration-300 px-6 py-3 mt-8 rounded-md">
-          Start Now For Free
-        </button>
+        <a href="/signup">
+          <button className="bg-primary text-white w-[190px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent hover:scale-95 transition-all duration-300 px-6 py-3 mt-8 rounded-md">
+            Start Now For Free
+          </button>
+        </a>
       </div>
       <div className="w-[50%]">
         <img src={doneimage} alt="" />

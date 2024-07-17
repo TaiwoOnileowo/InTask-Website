@@ -66,7 +66,8 @@ const HowItWorks = () => {
           </motion.div>
         ))}
         <div className="w-full flex items-center gap-4 justify-center mt-8">
-          <motion.button
+          <a href="/signup">
+           <motion.button
             onClick={() => setIndex(0)}
             className={`px-4 py-2 rounded-lg font-semibold ${
               index === 0 ? "bg-primary text-white" : "bg-gray-200 text-primary"
@@ -76,6 +77,8 @@ const HowItWorks = () => {
           >
             Freelancer
           </motion.button>
+          </a>
+         
           <motion.button
             onClick={() => setIndex(1)}
             className={`px-4 py-2 rounded-lg font-semibold ${

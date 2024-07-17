@@ -10,9 +10,12 @@ import CTA from "../components/Home/CTA";
 import TestimonialSection from "../components/Home/Testimonials";
 import Done from "../components/Home/Done";
 import Trusted from "../components/Home/Trusted";
+import Navbar from "../components/Layout/Navbar";
+import Footer from "../components/Layout/Footer";
 const App = () => {
   return (
     <div className="bg-white relative z-[10] overflow-hidden">
+      <Navbar/>
       <Hero />
       <Done />
       <HowItWorks />
@@ -20,6 +23,7 @@ const App = () => {
       <Trusted />
       <CTA />
       <NewsLetter />
+      <Footer/>
     </div>
   );
 };

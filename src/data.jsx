@@ -15,6 +15,8 @@ import graphic from "./assets/Home/graphic.avif";
 import productmanager from "./assets/Home/productmanager.webp";
 import uidesigner from "./assets/Home/uidesigner.jpg";
 import photography from "./assets/Home/photography.webp";
+import client from "./assets/SignUpLogin/client.svg";
+import freelancer from "./assets/SignUpLogin/freelancer.svg";
 export const navLinks = [
   {
     title: "Home",
@@ -68,35 +70,35 @@ export const heroData = [
     role: "Frontend Developer",
     name: "Timmy Dax",
     star: 5.0,
-    reviews: 241
+    reviews: 241,
   },
   {
     image: graphic,
     role: "Graphic Designer",
     name: "Oluwaseun Oyebade",
     star: 4.9,
-    reviews:93
+    reviews: 93,
   },
   {
     image: productmanager,
     role: "Product Manager",
     name: "Chibuzor Okafor",
     star: 4.9,
-    reviews: 75
+    reviews: 75,
   },
   {
     image: uidesigner,
     role: "UI/UX Designer",
     name: "Joyce Aries",
     star: 5.0,
-    reviews: 60
+    reviews: 60,
   },
   {
     image: photography,
     role: "Photographer",
     name: "Idika Precious",
     star: 4.9,
-    reviews: 139
+    reviews: 139,
   },
 ];
 export const categories = [
@@ -277,20 +279,24 @@ export const footerLinks = [
   {
     text1: "Get to Know Us",
     text2: "About Us",
+    link: "/about",
   },
   {
     text1: "Join inTask",
     text2: "Sign Up",
+    link: "/signup",
   },
   {
     text1: "Have a Project?",
     text2: "Talent Marketplace",
+    link: "/talentmarketplace",
   },
 ];
 export const footer = [
   {
     heading: "Clients",
     text: ["Sign Up", "How to Hire", "Talent Marketplace", "Hire an Agency"],
+    link: ["/signup", "howtohire", "/talentmarketplace", "/hireanagency"],
   },
   {
     heading: "Talent",
@@ -323,9 +329,18 @@ export const footer = [
   },
 ];
 export const socials = [<FaFacebookF />, <FaInstagram />, <FaLinkedin />];
-export const done=[
-"Get matched with expert freelancers in minutes",
-"Dedicated 24/7 customer service team",
-"Secure payments and transactions",
-"Money back guarantee and anti-fraud protection"
-]
+export const done = [
+  "Get matched with expert freelancers in minutes",
+  "Dedicated 24/7 customer service team",
+  "Secure payments and transactions",
+  "Money back guarantee and anti-fraud protection",
+];
+
+export const clientOrFreelancer = [
+  {
+    description: "I want to <br> hire a freelancer",
+  },
+  {
+    description: "I want to <br> work as a freelancer",
+  },
+];

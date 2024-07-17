@@ -70,19 +70,21 @@ const Hero = () => {
           InTask is an exclusive network of the top young freelancers. Top
           companies hire InTask talents for their most important projects.
         </motion.p>
-        <motion.button
-          style={{
-            backgroundColor: isHovered ? "#37DC29" : color,
-            transform: isHovered ? "scale(0.95)" : "scale(1)",
-            transition: "all 0.3s ease-in-out",
-          }}
-          className="text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent  px-6 py-3 mt-8 rounded-md"
-          variants={fadeInUp}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          Hire Top Talent
-        </motion.button>
+        <a href="/signup">
+          <motion.button
+            style={{
+              backgroundColor: isHovered ? "#37DC29" : color,
+              transform: isHovered ? "scale(0.95)" : "scale(1)",
+              transition: "all 0.3s ease-in-out",
+            }}
+            className="text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent  px-6 py-3 mt-8 rounded-md"
+            variants={fadeInUp}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            Hire Top Talent
+          </motion.button>
+        </a>
       </motion.div>
       <HeroAnimation index={index} setIndex={setIndex} />
     </div>

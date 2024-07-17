@@ -12,7 +12,14 @@ const Footer = () => {
         {footerLinks.map((link) => (
           <div className="flex justify-between border-b border-dim text-white py-2 font-roboto-mono">
             <p>{link.text1}</p>
-            <p className="inline-flex gap-4 cursor-pointer hover:scale-[0.9] items-center transition-all duration-300 hover:text-primary ease">{link.text2}<span className=""><FaArrowRight/></span></p>
+            <p className="cursor-pointer hover:scale-[0.9] items-center transition-all duration-300 hover:text-primary ease">
+              <a href={link.link} className="inline-flex gap-4 ">
+                {link.text2}
+                <span className="">
+                  <FaArrowRight />
+                </span>
+              </a>
+            </p>
           </div>
         ))}
       </div>
@@ -32,7 +39,9 @@ const Footer = () => {
       </div>
       <div className="flex gap-4 mt-10">
         {socials.map((item) => (
-          <div className="text-xl border rounded-full p-2 cursor-pointer hover:text-primary hover:border-primary">{item}</div>
+          <div className="text-xl border rounded-full p-2 cursor-pointer hover:text-primary hover:border-primary">
+            {item}
+          </div>
         ))}
       </div>
     </div>
