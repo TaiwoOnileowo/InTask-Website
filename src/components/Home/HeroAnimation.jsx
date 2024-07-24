@@ -22,7 +22,7 @@ const HeroAnimation = ({ index, setIndex }) => {
             alt={hero.role}
             className="w-full h-full object-cover rounded-md"
           />
-          <div className=" text-sm md:w-[10.6875rem] bg-white absolute rounded-md flex flex-col justify-center items-center gap-2 p-2 -right-2 sm:-right-6 md:-right-16 bottom-4 sm:bottom-[50%] bg-opacity-90 hero-mini-card">
+          <div className=" text-sm md:w-[10.6875rem] bg-white absolute rounded-md flex flex-col justify-center items-center gap-2 p-2 -right-2 sm:-right-6 md:-right-16 bottom-4 sm:bottom-[50%] md:bottom-4 bg-opacity-90 hero-mini-card">
             <img
               src="https://robohash.org/${Math.random()}?set=set5"
               alt="avatar"
