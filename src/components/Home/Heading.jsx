@@ -23,7 +23,7 @@ const Heading = ({ text }) => {
     <div className="mb-8">
       <motion.h1
         ref={ref}
-        className="text-3xl font-bold inline-flex items-center justify-center gap-2"
+        className="text-xl ts:text-3xl font-bold inline-flex items-center justify-center gap-2"
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={headingVariants}

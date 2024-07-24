@@ -25,10 +25,10 @@ const Categories = () => {
   };
 
   return (
-    <div ref={ref} className="relative z-[10] flex flex-col bg-white py-24 overflow-hidden justify-center items-center w-full">
+    <div ref={ref} className="relative z-[10] flex flex-col bg-white py-12 sm:py-24 overflow-hidden justify-center items-center w-full">
       <div className="absolute w-[60%] h-[80%] z-[0] -right-[40%] -top-[25%] blur opacity-80 rounded-full bg-gradient-4" />
       <Heading text="Browse talents by category" />
-      <p className="text-sm font-inter mt-2 text-center">
+      <p className="text-sm font-inter sm:mt-2 text-center">
         Looking for work?{" "}
         <a href="/jobs" className="underline text-primary">
           Browse Jobs

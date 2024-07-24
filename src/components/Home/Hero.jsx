@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import image from "../../assets/Home/image1.png";
 import HeroAnimation from "./HeroAnimation";
-
+import { Link } from "react-router-dom";
 const Hero = () => {
   const [index, setIndex] = useState(0);
   const [color, setColor] = useState("primary");
@@ -49,42 +49,42 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen px-24 flex pt-[15%] bg-gradient-5 gap-4 overflow-hidden relative">
+    <div className="sm:h-[60vh] md:h-screen px-8 ts:px-10 md:px-24 flex sm:flex-row flex-col pt-[30%] sm:pt-[20%] md:pt-[15%] bg-gradient-5 gap-4 overflow-hidden relative">
       <motion.div
         ref={ref}
-        className=" w-[60%] z-[10]"
+        className=" sm:w-[60%] z-[10]"
         variants={staggerContainer}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
         <motion.h1
-          className="font-poppins text-[4.625rem] font-[500] leading-[5.125rem] tracking-[-0.0625rem]"
+          className="font-poppins text-[2.5rem] ts:text-[4rem] md:text-[4.625rem] font-[500] leading-[3rem] ts:leading-[5.125rem] tracking-[-0.0625rem]"
           variants={fadeInUp}
         >
           Hire the Next Gen <span style={{ color: color }}>Talents</span>
         </motion.h1>
         <motion.p
-          className="mt-6 font-inter text-[1.3125rem] text-dim leading-[1.9375rem]"
+          className="mt-6 font-inter text-[1rem] ts:text-[1.3125rem] text-dim leading-[1.9375rem]"
           variants={fadeInUp}
         >
           InTask is an exclusive network of the top young freelancers. Top
           companies hire InTask talents for their most important projects.
         </motion.p>
-        <a href="/signup">
+        <Link to="/signup">
           <motion.button
             style={{
               backgroundColor: isHovered ? "#37DC29" : color,
               transform: isHovered ? "scale(0.95)" : "scale(1)",
               transition: "all 0.3s ease-in-out",
             }}
-            className="text-white w-[180px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent  px-6 py-3 mt-8 rounded-md"
+            className="text-white w-[200px] shadow-md shadow-accent hover:shadow-xl hover:shadow-accent  px-6 md:py-3 mt-6 py-2 md:mt-8 rounded-md"
             variants={fadeInUp}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             Hire Top Talent
           </motion.button>
-        </a>
+        </Link>
       </motion.div>
       <HeroAnimation index={index} setIndex={setIndex} />
     </div>

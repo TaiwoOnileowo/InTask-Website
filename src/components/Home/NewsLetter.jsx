@@ -24,17 +24,17 @@ const NewsLetter = () => {
       variants={staggerContainer}
     >
       <motion.div
-        className="w-full md:w-[50%] bg-white p-6 md:p-8 rounded-lg shadow-2xl"
+        className="w-full sm:w-[50%] bg-white p-6 md:p-8 rounded-lg shadow-2xl"
         variants={fadeInUp}
       >
         <motion.h1
-          className="text-4xl md:text-6xl font-bold text-center text-gray-800"
+          className="text-2xl ts:text-4xl md:text-6xl font-bold text-center text-gray-800"
           variants={fadeInUp}
         >
           Keep Yourself Up to Date
         </motion.h1>
         <motion.p
-          className="text-center text-gray-600 mt-4 font-inter"
+          className="text-center ts:text-base text-sm text-gray-600 mt-4 font-inter"
           variants={fadeInUp}
         >
           Stay ahead of the curve with the latest updates on new projects,

@@ -50,11 +50,11 @@ const Form = () => {
             </svg>
           )}
         </label>
-        <p className="text-sm">
+        <p className="text-xs ts:text-sm">
           Send me emails on how to find the best talents
         </p>
       </div>
-      <div className="text-sm mt-10 w-[80%]  flex items-center flex-col gap-4 mx-auto">
+      <div className="text-xs ts:text-sm mt-10 w-[80%]  flex items-center flex-col gap-4 mx-auto">
         <p className="text-dim">
           By signing up you accept InTask's{" "}
           <a href="" className="underline">
@@ -66,7 +66,7 @@ const Form = () => {
           </a>
           .
         </p>
-        <button className="bg-primary transition-all ease hover:shadow-md text-white text-base w-[200px] p-3 rounded-md">
+        <button className="bg-primary transition-all ease hover:shadow-md text-white text-base w-[200px] p-2 mt-2 ts:p-3 rounded-md">
           Sign Up
         </button>
       </div>

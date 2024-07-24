@@ -1,29 +1,30 @@
 import React from "react";
 import { footerLinks, footer, socials } from "../../data";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-dark items-center text-white px-24 py-14 justify-center font-roboto-mono">
+    <div className="flex flex-col bg-dark items-center px-8 text-white ts:px-24 py-14 justify-center font-roboto-mono">
       <h1 className="font-bold text-background text-6xl font-poppins">
         {" "}
         <span className="text-primary">In</span>Task
       </h1>
-      <div className="mt-8 w-[80%] ">
+      <div className="mt-8 w-full ts:w-[80%] ">
         {footerLinks.map((link) => (
-          <div className="flex justify-between border-b border-dim text-white py-2 font-roboto-mono">
+          <div className="flex ts:text-base text-xs justify-between border-b border-dim text-white py-2 font-roboto-mono">
             <p>{link.text1}</p>
             <p className="cursor-pointer hover:scale-[0.9] items-center transition-all duration-300 hover:text-primary ease">
-              <a href={link.link} className="inline-flex gap-4 ">
+              <Link to={link.link} className="inline-flex gap-4 ">
                 {link.text2}
                 <span className="">
                   <FaArrowRight />
                 </span>
-              </a>
+              </Link>
             </p>
           </div>
         ))}
       </div>
-      <div className="flex gap-16 mt-20 w-full justify-center">
+      <div className="grid grid-cols-2 grid-rows-2 ts:flex  items-center gap-8 ts:gap-16 ts:px-0 mt-20 w-full ts:justify-center">
         {footer.map((item) => (
           <div>
             <h3 className="text-xl">{item.heading}</h3>

@@ -8,8 +8,8 @@ import NewsLetter from "../components/Home/NewsLetter";
 import HowItWorks from "../components/Home/HowItWorks";
 import CTA from "../components/Home/CTA";
 import TestimonialSection from "../components/Home/Testimonials";
-import Done from "../components/Home/Done";
-import Trusted from "../components/Home/Trusted";
+import GetWorkDone from "../components/Home/GetWorkDone";
+import IdeaToLife from "../components/Home/IdeaToLife";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 const App = () => {
@@ -17,10 +17,10 @@ const App = () => {
     <div className="bg-white relative z-[10] overflow-hidden">
       <Navbar/>
       <Hero />
-      <Done />
+      <GetWorkDone />
       <HowItWorks />
       <Categories />
-      <Trusted />
+      <IdeaToLife />
       <CTA />
       <NewsLetter />
       <Footer/>

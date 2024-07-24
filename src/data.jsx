@@ -338,9 +338,9 @@ export const done = [
 
 export const clientOrFreelancer = [
   {
-    description: "I want to <br> hire a freelancer",
+    description: "I want to hire a freelancer",
   },
   {
-    description: "I want to <br> work as a freelancer",
+    description: "I want to work as a freelancer",
   },
 ];

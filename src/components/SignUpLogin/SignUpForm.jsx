@@ -10,13 +10,13 @@ const SignUpForm = ({clickedIndex}) => {
   ];
   return (
     <main className="w-full h-full flex-col flex items-center pt-10 mb-32">
-      <h1 className="text-3xl mb-10 font-medium">Sign up to start {clickedIndex ===  0 ? " hiring" : "working"}</h1>
-      <div className="flex w-[500px] justify-between mb-6">
+      <h1 className="text-xl ts:text-3xl mb-10 font-medium">Sign up to start {clickedIndex ===  0 ? " hiring" : "working"}</h1>
+      <div className="flex gap-2 w-full ts:w-[500px] justify-between mb-6">
         {signUpOptions.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex gap-4 cursor-pointer transition-all ease hover:bg-blue-400 hover:border-none hover:text-white items-center mb-4 bg-white p-1 px-2 rounded-md border-gray-500 border"
+              className="flex gap-2 ts:text-base text-xs ts:gap-4 cursor-pointer transition-all ease hover:bg-blue-400 hover:border-none hover:text-white items-center mb-4 bg-white p-1 px-2 rounded-md border-gray-500 border"
             >
               <img src={item.icon} alt="" className="w-8 h-8" />
               <p className="text-sm">{item.title}</p>
@@ -24,7 +24,7 @@ const SignUpForm = ({clickedIndex}) => {
           );
         })}
       </div>
-      <div className="w-[500px] flex gap-4 items-center justify-center">
+      <div className="ts:w-[500px] w-full flex gap-4 items-center justify-center">
         <hr className="w-[50%] border-gray-300" />
         <p>or</p>
         <hr className="w-[50%] border-gray-300" />
